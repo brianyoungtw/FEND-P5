@@ -1,8 +1,8 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(loc) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-
+    this.loc = loc;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
