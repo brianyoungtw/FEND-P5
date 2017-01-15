@@ -1,9 +1,9 @@
 // Enemies our player must avoid
-var Enemy = function(loc_x,loc_y) {
+var Enemy = function(x,y) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-    this.loc_x = loc_x;
-    this.loc_y = loc_y;
+    this.x = x;
+    this.y = y;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
@@ -15,7 +15,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.loc_x = this.loc_x*dt ;
+    this.x = this.x*dt ;
     //no this.loc_y because Enemy's y location doesn't change
 };
 
@@ -30,21 +30,21 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function(loc_x,loc_y){
-    this.loc_x=loc_x;
-    this.loc_y=loc_y;
+var Player = function(x,y) {
+    this.x = x;
+    this.y = y;
     this.sprite = 'images/char-cat-girl.png';
 }
 
-Player.prototype.update = function(){
+Player.prototype.update = function() {
     //ToDo: add keys to change x,y
 }
 
-Player.prototype.render = function(){
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-Player.prototype.handleInput = function(){
+Player.prototype.handleInput = function() {
     //ToDo
 }
 
