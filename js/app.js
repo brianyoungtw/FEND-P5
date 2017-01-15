@@ -44,6 +44,10 @@ Player.prototype.render = function(){
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
+Player.prototype.handleInput(){
+    //ToDo
+}
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 var allEnemies = [new Enemy(1), new Enemy(-50), new Enemy (50)];
