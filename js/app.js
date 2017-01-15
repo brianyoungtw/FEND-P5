@@ -36,7 +36,6 @@ Enemy.prototype.render = function() {
 var allEnemies = [new Enemy(1), new Enemy(-50), new Enemy (50)];
 
 // Place the player object in a variable called player
-var player = new Enemy(0);
 
 
 // This listens for key presses and sends the keys to your
