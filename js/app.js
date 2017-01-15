@@ -16,6 +16,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.loc_x = this.loc_x*dt ;
+    //no this.loc_y because Enemy's y location doesn't change
 };
 
 // Draw the enemy on the screen, required method for game
@@ -29,7 +30,11 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-
+var Player = function(loc_x,loc_y){
+    this.loc_x=loc_x;
+    this.loc_y=loc_y;
+    this.sprite = 'images/char-cat-girl.png';
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
